@@ -13,7 +13,7 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
- J = (1 / (2*m) ) * ( X	* theta - y )' * ( X*theta - y ) % this vectorized implementation is faster 
+ J = (1 / (2*m) ) * ( X	* theta - y )' * ( X*theta - y ); % this vectorized implementation is faster 
  
  % OR (below is method 2 for J computation, but slower as it's not vectorized like above implementation):
  
