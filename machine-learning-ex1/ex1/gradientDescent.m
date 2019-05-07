@@ -15,14 +15,13 @@ for iter = 1:num_iters
     %
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
-    %
-
+    %	
+	
 	theta_next = zeros(size(theta));
 	
-	for j = 1:size(theta, 1)
-		theta_next(j) = theta(j) - ((alpha/m) * (X*theta - y)' * X(:, j));
-	end	
-	
+	%vectorized implementation: 
+	theta_next = theta - ((alpha/m) * X' * (X*theta - y));
+			
 	theta = theta_next;
 	
     % ============================================================
